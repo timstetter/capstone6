@@ -6,9 +6,29 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Capstone 6</title>
+<title>Capstone 6 | Login</title>
 </head>
 <body>
-	<h1>Capstone 6</h1>
+	<h1>Capstone 6 - Tasks</h1>
+	
+	<h3>Login</h3>
+	
+	<form method="post" action="/login">
+		Email: <input type="email" name="email" /><br />
+		Password: <input type="password" name="password" /><br />
+		<input type="submit" />
+	</form>
+	
+	${ error }
+	
+	<h3>Register</h3>
+	
+	<form method="post" action="/register">
+		Email: <input type="email" name="email" /><br />
+		Password: <input type="password" name="password" /><br />
+		<input type="submit" />
+	</form>
+	
+	
 </body>
 </html>
