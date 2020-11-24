@@ -28,15 +28,16 @@ public class TaskController {
 	
 	@PostMapping("/login")
 	public String login(User user, Model model) {
-		User newUser = userRep.findByEmail(user.getEmail());
-		if ((newUser.getPassword().compareTo(user.getPassword()) == 0) && newUser != null) {
+		User newUser = userRep.findByEmail(user.getEmail()); 
+		if (newUser != null && newUser.getPassword().compareTo(user.getPassword()) == 0) {
 			session.setAttribute("email", newUser.getEmail());
 			session.setAttribute("userid", newUser.getId());
 			return "redirect:/tasks";
-		} else {
-			model.addAttribute("error", "Cannot login");
+		}
+		else {
+			model.addAttribute("error", "Error. Please try again.");
 			return "index";
-		}		
+		}
 	}
 	
 	@GetMapping("/logout")

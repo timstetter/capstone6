@@ -14,17 +14,17 @@
 	<h3>Login</h3>
 	
 	<form method="post" action="/login">
-		Email: <input type="email" name="email" /><br />
+		Email: <input type="text" name="email" /><br />
 		Password: <input type="password" name="password" /><br />
 		<input type="submit" />
 	</form>
 	
-	${ error }
+	<p style="color:red;"><c:out value="${ error }"/></p>
 	
 	<h3>Register</h3>
 	
 	<form method="post" action="/register">
-		Email: <input type="email" name="email" /><br />
+		Email: <input type="text" name="email" /><br />
 		Password: <input type="password" name="password" /><br />
 		<input type="submit" />
 	</form>
