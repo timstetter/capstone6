@@ -16,24 +16,29 @@ What Will the Application Do?
 ● A user can create a new account with email address and password
 
 ● Once logged in, the user can create a new task. Tasks consist of:
+
   o The ID of the user who owns it (user doesn’t get to edit this field)
   o A task description
   o The due date
   o Whether it’s complete or not
   
 ● The user should see a list of all tasks they own
+
   o There should be a button or checkbox to mark the task complete
   o There should be a button to delete the task
   
 Build Specifications
+
   1. Build this as a Spring MVC web application
   2. Store users and tasks in separate database tables
   3. Minimum views: Welcome/login page, task list, add task view
   
 Hints
+
   ● Show only the tasks which have this user’s ID
   
 Extended Challenges
+
 ● Let the user search for a task by a word or words in the description
 ● Let the user sort or filter by due date
 ● Let the user sort or filter by completion status
